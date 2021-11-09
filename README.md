@@ -29,16 +29,16 @@ Result: The score goes down to 0.63733
 **Learning**: Manual extracted features do not provide any good improvement to the result. It may happen because of the features are coming from the text directly instead of extra metadata provided. The weighting of the model may also lower the NLP result accuracy.<br>
 
 ### Fifth Submission
-This is the final submission to find the optimal model with limited computational power.
-1. Upsampling has been tried and see the result.
-2. Word preprocessing has been done
-3. Extra CCN (Conv1D) has been added
-4. Added a exponential learning rate decay scheduler
-Result: The score goes back to 0.64173
-**Learning**: Upsampling does not give an improvement to the model. It is because the ratio of "very position" and "very negative" are relatively low. To upsampling the dataset is changing the dataset behavior. 
-**Learning**: The accuracy could be improved by fixing typo from the dataset. However, this will result in huge computational demand. In such case, only very basic word cleansing have been done. But it will be good to fix typo issue, which will reduce noise from the dataset.
-**Learning**: Conv1D creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs. It works good on a sequence model and will reduce the computational demand. [More](https://stats.stackexchange.com/questions/295397/what-is-the-difference-between-conv1d-and-conv2d) However, this does not provide a big improvement to the model. 
-**Learning** While the first four submissions show an importance on the impact of learning rate. 1e-3 has been used as the starting learning rate with an aggressive exponential decay (i.e. 0.75 decay rate on every 1000 steps). This significant reduce the training time and retain the performance. 
+This is the final submission to find the optimal model with limited computational power.<br>
+1. Upsampling has been tried and see the result<br>
+2. Word preprocessing has been done<br>
+3. Extra CCN (Conv1D) has been added<br>
+4. Added a exponential learning rate decay scheduler<br>
+Result: The score goes back to 0.64173<br>
+**Learning**: Upsampling does not give an improvement to the model. It is because the ratio of "very position" and "very negative" are relatively low. To upsampling the dataset is changing the dataset behavior. <br>
+**Learning**: The accuracy could be improved by fixing typo from the dataset. However, this will result in huge computational demand. In such case, only very basic word cleansing have been done. But it will be good to fix typo issue, which will reduce noise from the dataset.<br>
+**Learning**: Conv1D creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs. It works good on a sequence model and will reduce the computational demand. [More](https://stats.stackexchange.com/questions/295397/what-is-the-difference-between-conv1d-and-conv2d) However, this does not provide a big improvement to the model. <br>
+**Learning** While the first four submissions show an importance on the impact of learning rate. 1e-3 has been used as the starting learning rate with an aggressive exponential decay (i.e. 0.75 decay rate on every 1000 steps). This significant reduce the training time and retain the performance. <br>
 
 ### Overall
-In order to further improve the model accuracy, multiple GRUs / Conv1D + Batchnormalization could be helpful. Learning rate, batch size and epochs are key parameters to train the model
+In order to further improve the model accuracy, multiple GRUs / Conv1D + Batchnormalization could be helpful. Learning rate, batch size and epochs are key parameters to train the model.<br>
